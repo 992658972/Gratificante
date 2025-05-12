@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal</title>
+    <link rel="stylesheet" href="alex.css">
+</head>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007acc;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.imagen-deporte {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Permite controlar fácilmente el tamaño desde una clase padre o por media queries */
+.deporte {
+    text-align: center;
+}
+
+.deportes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.deporte {
+    background-color: #e9f5ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.deporte h3 {
+    margin-bottom: 10px;
+    color: #005a9e;
+}
+
+@media (max-width: 768px) {
+    .deportes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .deportes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+section h2 {
+    margin-bottom: 10px;
+    color: #007acc;
+}
+
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+</style>
+
+<body>
+    <header>
+        <h1>Yuri Alexander</h1>
+        <nav>
+            <ul>
+                <li><a href="#datos-personales">Datos Personales</a></li>
+                <li><a href="#familia">Actividades Familiares</a></li>
+                <li><a href="#deportes">Actividades Deportivas</a></li>
+                <li><a href="#logros">Logros Académicos</a></li>
+                <li><a href="#proyectos">Proyectos Personales</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="datos-personales">
+            <h2>Datos Personales</h2>
+            <p>Nombre: Juan Pérez</p>
+            <p>Edad: 25 años</p>
+            <p>Ubicación: Ciudad de México</p>
+            <p>Profesión: Desarrollador Web</p>
+        </section>
+
+        <section id="familia">
+            <h2>Actividades Familiares</h2>
+            <p>Disfruto pasar tiempo con mi familia los fines de semana, organizando reuniones y actividades
+                recreativas.</p>
+
+            <div class="video-familia">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Actividades en familia" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                    <iframe width="1372" height="772" src="https://www.youtube.com/embed/5RdPrH4_W9g"
+                        title="&quot;Video reflexivo y emotivo para padres de familia&quot;" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <section id="deportes">
+                        <h2>Actividades Deportivas</h2>
+                        <div class="deportes-grid">
+                            <div class="deporte">
+                                <img src="futbol.jpg" alt="Fútbol" class="imagen-deporte">
+                                <h3>Fútbol</h3>
+                                <p>Juego fútbol con amigos los fines de semana. Me gusta seguir las ligas
+                                    internacionales y entrenar como delantero.</p>
+                            </div>
+                            <div class="deporte">
+                                <img src="voley.jpg" alt="Vóley" class="imagen-deporte">
+                                <h3>Vóley</h3>
+                                <p>Participo en torneos de vóley de playa durante el verano. Es una de mis formas
+                                    favoritas de socializar y mantenerme activo.</p>
+                            </div>
+                            <div class="deporte">
+                                <img src="tenis.jpg" alt="Tenis" class="imagen-deporte">
+                                <h3>Tenis</h3>
+                                <p>Practico tenis en un club local. Me ayuda a mejorar mi coordinación y mantenerme en
+                                    forma.</p>
+                            </div>
+                            <div class="deporte">
+                                <img src="basquet.jpg" alt="Básquet" class="imagen-deporte">
+                                <h3>Básquet</h3>
+                                <p>Juego básquet con mis compañeros de trabajo después de la jornada laboral. Es una
+                                    gran manera de liberar estrés.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                    <section id="logros">
+                        <h2>Logros Académicos</h2>
+                        <ul>
+                            <li>Título en Ingeniería en Sistemas</li>
+                            <li>Certificación en Desarrollo Web Full Stack</li>
+                            <li>Participación en olimpiadas de programación</li>
+                        </ul>
+                    </section>
+
+                    <section id="proyectos">
+                        <h2>Proyectos Personales</h2>
+                        <ul>
+                            <li>Desarrollo de una app de recetas</li>
+                            <li>Blog personal sobre tecnología</li>
+                            <li>Portafolio de diseño web</li>
+                        </ul>
+                    </section>
+
+                    <section id="contacto">
+                        <h2>Contacto</h2>
+                        <p>Email: juanperez@example.com</p>
+                        <p>Teléfono: +52 123 456 7890</p>
+                        <p>Redes: <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+                    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Juan Pérez. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
